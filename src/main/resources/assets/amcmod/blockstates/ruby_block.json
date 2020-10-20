@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "amcmod:block/ruby_block" }
+    }
+}

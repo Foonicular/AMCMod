@@ -1,0 +1,16 @@
+{
+	"itemGroup.amcmodtab": "AMCMod Tab",
+	
+	"item.amcmod.ruby": "Ruby",
+	"item.amcmod.poison_apple": "Poison Apple",
+	
+	"block.amcmod.ruby_block": "Ruby Block",
+	"block.amcmod.ruby_ore": "Ruby Ore",
+	
+	"item.amcmod.ruby_sword": "Ruby Sword",
+	"item.amcmod.ruby_pickaxe": "Ruby Pickaxe",
+	"item.amcmod.ruby_axe": "Ruby Axe",
+	"item.amcmod.ruby_shovel": "Ruby Shovel",
+	"item.amcmod.ruby_hoe": "Ruby Hoe"
+	
+}
