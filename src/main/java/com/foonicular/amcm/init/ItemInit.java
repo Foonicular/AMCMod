@@ -77,7 +77,7 @@ public class ItemInit {
 		 * Order in which the numbers go
 		 * int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
 		 */
-		RUBYTOOLS(2, 750, 0.0F, 0.0F, 15, () -> {
+		RUBYTOOLS(2, 750, 5.0F, 0.0F, 15, () -> {
 			return Ingredient.fromItems(ItemInit.ruby);
 		});
 		
