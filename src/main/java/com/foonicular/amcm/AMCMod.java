@@ -19,7 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod("amcmod")
 public class AMCMod {
 	
-	private static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "amcmod";
     public static AMCMod instance;
     
