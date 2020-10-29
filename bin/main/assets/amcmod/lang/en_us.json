@@ -12,6 +12,11 @@
 	"item.amcmod.ruby_pickaxe": "Ruby Pickaxe",
 	"item.amcmod.ruby_axe": "Ruby Axe",
 	"item.amcmod.ruby_shovel": "Ruby Shovel",
-	"item.amcmod.ruby_hoe": "Ruby Hoe"
+	"item.amcmod.ruby_hoe": "Ruby Hoe",
+	
+	"item.amcmod.ruby_helmet": "Ruby Helmet",
+	"item.amcmod.ruby_chestplate": "Ruby Chestplate",
+	"item.amcmod.ruby_leggings": "Ruby Leggings",
+	"item.amcmod.ruby_boots": "Ruby Boots"
 	
 }
