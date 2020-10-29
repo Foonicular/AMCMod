@@ -2,6 +2,7 @@ package com.foonicular.amcm.init;
 
 import com.foonicular.amcm.AMCMod;
 import com.foonicular.amcm.AMCMod.AMCModItemGroups;
+import com.foonicular.amcm.objects.blocks.RubyOre;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -31,12 +32,7 @@ public class BlockInit {
 				.harvestTool(ToolType.PICKAXE))
 				.setRegistryName("ruby_block"));
 		
-		event.getRegistry().register(new Block(Block.Properties.create(Material.ROCK)
-				.hardnessAndResistance(0.5f, 5.0f)
-				.sound(SoundType.STONE)
-				.harvestLevel(2)
-				.harvestTool(ToolType.PICKAXE))
-				.setRegistryName("ruby_ore"));
+		event.getRegistry().register(new RubyOre().setRegistryName("ruby_ore"));
 	}
 	
 	@SubscribeEvent

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.foonicular.amcm.init.ItemInit;
+import com.foonicular.amcm.world.gen.RubyOreGen;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -11,12 +12,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("amcmod")
+@Mod.EventBusSubscriber(modid = AMCMod.MOD_ID, bus = Bus.MOD)
 public class AMCMod {
 	
 	public static final Logger LOGGER = LogManager.getLogger();
@@ -46,6 +50,11 @@ public class AMCMod {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         
+    }
+    
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+    	RubyOreGen.generateOre();
     }
     
     public static class AMCModItemGroups extends ItemGroup {

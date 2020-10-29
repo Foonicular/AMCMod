@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.foonicular.amcm.AMCMod;
 import com.foonicular.amcm.AMCMod.AMCModItemGroups;
+import com.foonicular.amcm.objects.items.RingOfStrength;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Food;
@@ -30,6 +31,7 @@ public class ItemInit {
 	// Items
 	public static final Item ruby = null;
 	public static final Item poison_apple = null;
+	public static final Item ring_of_strength = null;
 	
 	// Tools
 	public static final Item ruby_sword = null;
@@ -38,11 +40,13 @@ public class ItemInit {
 	public static final Item ruby_shovel = null;
 	public static final Item ruby_hoe = null;
 	
+	@SuppressWarnings("deprecation")
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register.Register<Item> event) {
 		
 		// Items
 		event.getRegistry().register(new Item(new Item.Properties().group(AMCModItemGroups.instance)).setRegistryName("ruby"));
+		event.getRegistry().register(new RingOfStrength(new Item.Properties().group(AMCModItemGroups.instance)).setRegistryName("ring_of_strength"));
 		
 		// Foods
 		event.getRegistry().register(new Item(new Item.Properties().group(AMCModItemGroups.instance)
