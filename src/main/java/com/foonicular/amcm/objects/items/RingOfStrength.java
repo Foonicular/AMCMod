@@ -40,7 +40,7 @@ public class RingOfStrength extends Item {
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-		playerIn.addPotionEffect(new EffectInstance(Effects.STRENGTH, 20000000, 2));
+		playerIn.addPotionEffect(new EffectInstance(Effects.STRENGTH, 200, 2));
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
 	

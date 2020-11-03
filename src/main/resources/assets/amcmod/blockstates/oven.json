@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "amcmod:block/oven" },
+        "facing=south": { "model": "amcmod:block/oven", "y": 180 },
+        "facing=west": { "model": "amcmod:block/oven", "y": 270 },
+        "facing=east": { "model": "amcmod:block/oven", "y": 90 }
+    }
+}
