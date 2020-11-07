@@ -28,7 +28,6 @@ public class ItemInit {
 	// Items
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 			() -> new Item(new Item.Properties().group(AMCMod.TAB)));
-	
 	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> POISON_APPLE = ITEMS.register("poison_apple",
 			() -> new Item(new Item.Properties().group(AMCMod.TAB)
@@ -37,7 +36,6 @@ public class ItemInit {
 							.effect(new EffectInstance(Effects.HUNGER, 400, 1), 1.0f)
 							.effect(new EffectInstance(Effects.WEAKNESS, 400, 1), 0.7f)
 							.effect(new EffectInstance(Effects.NAUSEA, 400, 1), 0.5f).build())));
-	
 	public static final RegistryObject<Item> RING_OF_STRENGTH = ITEMS.register("ring_of_strength",
 			() -> new RingOfStrength(new Item.Properties().group(AMCMod.TAB)));
 	

@@ -13,9 +13,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInit {
-	
+
 	public static DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, AMCMod.MOD_ID);
-	
+
 	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
 			() -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(1.0f, 6.0f)
 					.sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
@@ -23,5 +23,5 @@ public class BlockInit {
 	public static final RegistryObject<Block> OVEN = BLOCKS.register("oven",
 			() -> new Oven(Block.Properties.create(Material.ANVIL).hardnessAndResistance(2.0f, 7.0f).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.ANVIL).lightValue(1)));
-	
+
 }

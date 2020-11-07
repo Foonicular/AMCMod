@@ -62,11 +62,11 @@ public class AMCMod {
     }
     
     private void setup(final FMLCommonSetupEvent event) {
-        
+    	
     }
     
     private void doClientStuff(final FMLClientSetupEvent event) {
-        
+    	
     }
     
     @SubscribeEvent
