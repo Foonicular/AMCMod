@@ -19,7 +19,7 @@ public enum RubyArmorMaterial implements IArmorMaterial {
 	// Int Array goes BOOTS LEGGINGS CHESTPLATE HELMET
 	RUBYARMOR(AMCMod.MOD_ID + ":ruby", 25, new int[] { 2, 5, 7, 3 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 6.9F,
 			() -> {
-				return Ingredient.fromItems(ItemInit.ruby);
+				return Ingredient.fromItems(ItemInit.RUBY.get());
 			});
 
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 16, 15, 13 };

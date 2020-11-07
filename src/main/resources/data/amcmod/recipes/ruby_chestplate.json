@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "r r",
+    "rrr",
+    "rrr"
+  ],
+  "key":
+  {
+    "r":
+    {
+      "item": "amcmod:ruby"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:ruby_chestplate",
+    "count": 1
+  }
+}

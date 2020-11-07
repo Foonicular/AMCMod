@@ -16,7 +16,7 @@ public enum RubyItemTier implements IItemTier {
 	 * attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
 	 */
 	RUBYTOOLS(2, 750, 5.0F, 0.0F, 15, () -> {
-		return Ingredient.fromItems(ItemInit.ruby);
+		return Ingredient.fromItems(ItemInit.RUBY.get());
 	});
 
 	private final int harvestLevel;

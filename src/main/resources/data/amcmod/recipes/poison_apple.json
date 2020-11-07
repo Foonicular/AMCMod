@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "rar",
+    "rmr",
+    "rrr"
+  ],
+  "key":
+  {
+      "a":
+    {
+      "item": "minecraft:apple"
+    },
+      "m":
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+      "r":
+    {
+      "item": "amcmod:ruby"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:poison_apple",
+    "count": 1
+  }
+}

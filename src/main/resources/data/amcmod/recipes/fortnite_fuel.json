@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ccc",
+    "crc",
+    "ccc"
+  ],
+  "key":
+  {
+      "c":
+    {
+      "item": "minecraft:coal"
+    },
+      "r":
+    {
+      "item": "amcmod:ruby"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:fortnite",
+    "count": 1
+  }
+}

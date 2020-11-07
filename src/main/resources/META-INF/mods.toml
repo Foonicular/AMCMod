@@ -6,11 +6,11 @@ loaderVersion="[31,)"
 
 modId="amcmod"
 
-version="1.0"
+version="0.2"
 
 displayName="A Minecraft Mod"
 
-logoFile="examplelogo.png"
+logoFile="icon.png"
 
 credits="Thanks to TechnoVision and TurtyWurty for helping me learn how to mod."
 

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ggg",
+    "r r",
+    "ddd"
+  ],
+  "key":
+  {
+    "r":
+    {
+      "item": "amcmod:ruby_block"
+    },
+      "g":
+    {
+      "item": "minecraft:gold_block"
+    },
+      "d":
+    {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:ring_of_strength",
+    "count": 1
+  }
+}

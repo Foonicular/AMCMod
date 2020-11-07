@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "iii",
+    "ici",
+    "i i"
+  ],
+  "key":
+  {
+    "i":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+      "c":
+    {
+      "item": "minecraft:coal"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:oven",
+    "count": 1
+  }
+}

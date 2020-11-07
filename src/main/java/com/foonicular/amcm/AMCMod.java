@@ -3,14 +3,19 @@ package com.foonicular.amcm;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.foonicular.amcm.init.BlockInit;
 import com.foonicular.amcm.init.ItemInit;
 import com.foonicular.amcm.world.gen.RubyOreGen;
 
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -18,6 +23,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod("amcmod")
 @Mod.EventBusSubscriber(modid = AMCMod.MOD_ID, bus = Bus.MOD)
@@ -25,7 +31,6 @@ public class AMCMod {
 	
 	public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "amcmod";
-    public static AMCMod instance;
     
     public AMCMod() {
     	
@@ -34,9 +39,26 @@ public class AMCMod {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
         
-        instance = this;
+        ItemInit.ITEMS.register(modEventBus);
+        BlockInit.BLOCKS.register(modEventBus);
+        
         MinecraftForge.EVENT_BUS.register(this);
         
+    }
+    
+    @SubscribeEvent
+    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
+    	final IForgeRegistry<Item> registry = event.getRegistry();
+    	
+    	BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+			final Item.Properties properties = new Item.Properties().group(AMCMod.TAB);
+    		final BlockItem blockItem = new BlockItem(block, properties);
+    		blockItem.setRegistryName(block.getRegistryName());
+    		registry.register(blockItem);
+    	});
+    	
+    	LOGGER.debug("Registered Block Items!");
+    	
     }
     
     private void setup(final FMLCommonSetupEvent event) {
@@ -57,19 +79,10 @@ public class AMCMod {
     	RubyOreGen.generateOre();
     }
     
-    public static class AMCModItemGroups extends ItemGroup {
-    	
-    	public static final AMCModItemGroups instance = new AMCModItemGroups(ItemGroup.GROUPS.length, "amcmodtab");
-    	
-    	private AMCModItemGroups(int index, String label) {
-    		super (index, label);
-    	}
-    	
-    	@Override
-    	public ItemStack createIcon() {
-    		return new ItemStack(ItemInit.ruby);
-    	}
-    	
-    }
+    // Custom Item Group
+    public static final ItemGroup TAB = new ItemGroup("amcmodtab") {
+        @Override
+        public ItemStack createIcon() { return new ItemStack(ItemInit.RUBY.get()); }
+    };
     
 }
