@@ -21,4 +21,9 @@ public class KeyboardHelper {
 		return InputMappings.isKeyDown(WINDOW, GLFW.GLFW_KEY_LEFT_CONTROL) || InputMappings.isKeyDown(WINDOW, GLFW.GLFW_KEY_RIGHT_CONTROL);
 	}
 	
+	@OnlyIn(Dist.CLIENT)
+	public static boolean isHoldingR() {
+		return InputMappings.isKeyDown(WINDOW, GLFW.GLFW_KEY_R);
+	}
+	
 }
