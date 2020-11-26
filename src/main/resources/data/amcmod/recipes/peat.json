@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "vvv",
+    "vvv",
+    "vvv"
+  ],
+  "key":
+  {
+      "v":
+    {
+      "item": "minecraft:vine"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:peat",
+    "count": 1
+  }
+}

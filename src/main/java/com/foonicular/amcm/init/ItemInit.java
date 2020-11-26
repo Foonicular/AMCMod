@@ -1,7 +1,7 @@
 package com.foonicular.amcm.init;
 
 import com.foonicular.amcm.AMCMod;
-import com.foonicular.amcm.objects.items.Fortnite;
+import com.foonicular.amcm.objects.items.Peat;
 import com.foonicular.amcm.objects.items.RingOfStrength;
 import com.foonicular.amcm.util.enums.RubyArmorMaterial;
 import com.foonicular.amcm.util.enums.RubyItemTier;
@@ -70,7 +70,7 @@ public class ItemInit {
 					new Item.Properties().group(AMCMod.TAB)));
 	
 	// Fuel
-	public static final RegistryObject<Item> FORTNITE = ITEMS.register("fortnite",
-			() -> new Fortnite(new Item.Properties().group(AMCMod.TAB)));
+	public static final RegistryObject<Item> FORTNITE = ITEMS.register("peat",
+			() -> new Peat(new Item.Properties().group(AMCMod.TAB)));
 	
 }
