@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.foonicular.amcm.init.BlockInit;
 import com.foonicular.amcm.init.ItemInit;
+import com.foonicular.amcm.init.ModTileEntityTypes;
 import com.foonicular.amcm.world.gen.RubyOreGen;
 
 import net.minecraft.item.BlockItem;
@@ -41,6 +42,7 @@ public class AMCMod {
         
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         
         MinecraftForge.EVENT_BUS.register(this);
         

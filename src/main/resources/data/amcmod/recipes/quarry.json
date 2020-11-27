@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "iii",
+    "igi",
+    "iri"
+  ],
+  "key":
+  {
+    "i":
+    {
+      "item": "minecraft:iron_block"
+    },
+        "g":
+    {
+      "item": "minecraft:gold_block"
+    },
+      "r":
+    {
+      "item": "amcmod:ruby_block"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:quarry",
+    "count": 1
+  }
+}

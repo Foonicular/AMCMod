@@ -1,6 +1,7 @@
 package com.foonicular.amcm.init;
 
 import com.foonicular.amcm.AMCMod;
+import com.foonicular.amcm.objects.blocks.BlockQuarry;
 import com.foonicular.amcm.objects.blocks.Oven;
 import com.foonicular.amcm.objects.blocks.RubyOre;
 
@@ -23,5 +24,8 @@ public class BlockInit {
 	public static final RegistryObject<Block> OVEN = BLOCKS.register("oven",
 			() -> new Oven(Block.Properties.create(Material.ANVIL).hardnessAndResistance(2.0f, 7.0f).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).sound(SoundType.ANVIL).lightValue(1)));
+	public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry",
+			() -> new BlockQuarry(Block.Properties.create(Material.IRON).hardnessAndResistance(5.0f, 9.0f)
+					.harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE).lightValue(1)));
 
 }
