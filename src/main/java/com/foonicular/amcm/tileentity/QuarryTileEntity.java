@@ -33,7 +33,7 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
 	public void tick() {
 		if(!initialized) init();
 		tick++;
-		if(tick == 1200) {
+		if(tick == 6000) {
 			tick = 0;
 			if(y > 4) execute();
 		}
