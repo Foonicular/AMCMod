@@ -8,6 +8,8 @@
 	
 	"block.amcmod.ruby_block": "Ruby Block",
 	"block.amcmod.ruby_ore": "Ruby Ore",
+	"block.amcmod.moss_block": "Moss Block",
+	"block.amcmod.poop_block": "Poop Block",
 	"block.amcmod.oven": "Oven",
 	"block.amcmod.quarry": "Quarry",
 	"block.amcmod.ruby_stairs": "Ruby Stairs",
@@ -24,6 +26,8 @@
 	"item.amcmod.ruby_helmet": "Ruby Helmet",
 	"item.amcmod.ruby_chestplate": "Ruby Chestplate",
 	"item.amcmod.ruby_leggings": "Ruby Leggings",
-	"item.amcmod.ruby_boots": "Ruby Boots"
+	"item.amcmod.ruby_boots": "Ruby Boots",
+	
+	"biome.amcmod.mossy_biome": "Moss Biome"
 	
 }

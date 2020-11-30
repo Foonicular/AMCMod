@@ -17,7 +17,7 @@ public class RubyOreGen {
 		for (Biome biome : ForgeRegistries.BIOMES) {
 			// The numbers are RARITY, BOTTOM OFFSET, TOP OFFSET, and MAXIMUM. (Maximum is added to top offset.)
 			@SuppressWarnings("rawtypes")
-			ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 5, 5, 201));
+			ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(4, 0, 0, 64));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
 							BlockInit.RUBY_ORE.get().getDefaultState(), 6)).withPlacement(customConfig));

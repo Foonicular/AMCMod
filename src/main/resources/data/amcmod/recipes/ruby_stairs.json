@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "r  ",
+    "rr ",
+    "rrr"
+  ],
+  "key":
+  {
+    "r":
+    {
+      "item": "amcmod:ruby"
+    }
+  },
+  "result":
+  {
+    "item": "amcmod:ruby_stairs",
+    "count": 1
+  }
+}

@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public enum RubyArmorMaterial implements IArmorMaterial {
 
 	// Int Array goes BOOTS LEGGINGS CHESTPLATE HELMET
-	RUBYARMOR(AMCMod.MOD_ID + ":ruby", 25, new int[] { 2, 5, 7, 3 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 6.9F,
+	RUBYARMOR(AMCMod.MOD_ID + ":ruby", 25, new int[] { 1, 4, 5, 2 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F,
 			() -> {
 				return Ingredient.fromItems(ItemInit.RUBY.get());
 			});
@@ -30,11 +30,11 @@ public enum RubyArmorMaterial implements IArmorMaterial {
 	private final SoundEvent soundEvent;
 	private final float toughness;
 	private final LazyValue<Ingredient> repairMaterial;
-
+	
 	private RubyArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn,
 			int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn,
 			Supplier<Ingredient> repairMaterialIn) {
-
+		
 		this.name = nameIn;
 		this.maxDamageFactor = maxDamageFactorIn;
 		this.damageReductionAmountArray = damageReductionAmountIn;

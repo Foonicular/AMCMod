@@ -3,6 +3,7 @@ package com.foonicular.amcm;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.foonicular.amcm.init.BiomeInit;
 import com.foonicular.amcm.init.BlockInit;
 import com.foonicular.amcm.init.ItemInit;
 import com.foonicular.amcm.init.ModTileEntityTypes;
@@ -12,6 +13,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -43,6 +45,7 @@ public class AMCMod {
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        BiomeInit.BIOMES.register(modEventBus);
         
         MinecraftForge.EVENT_BUS.register(this);
         
@@ -61,6 +64,11 @@ public class AMCMod {
     	
     	LOGGER.debug("Registered Block Items!");
     	
+    }
+    
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+    	BiomeInit.registerBiomes();
     }
     
     private void setup(final FMLCommonSetupEvent event) {

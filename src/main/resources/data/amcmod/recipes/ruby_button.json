@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "amcmod:ruby"
+    }
+  ],
+  "result":
+  {
+    "item": "amcmod:ruby_button",
+    "count": 1
+  }
+}
