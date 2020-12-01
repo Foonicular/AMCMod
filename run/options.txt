@@ -21,7 +21,7 @@ toggleSprint:false
 mouseSensitivity:0.5
 fov:0.5
 gamma:1.0
-renderDistance:16
+renderDistance:8
 guiScale:3
 particles:0
 maxFps:70

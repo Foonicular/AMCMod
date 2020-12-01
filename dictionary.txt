@@ -1,6 +1,0 @@
-int
-blockstate
-enchantability
-minspawn
-maxspawn
-entitytype
