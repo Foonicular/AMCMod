@@ -32,7 +32,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod.EventBusSubscriber(modid = AMCMod.MOD_ID, bus = Bus.MOD)
 public class AMCMod {
 	
-	public static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "amcmod";
     
     public AMCMod() {
