@@ -34,6 +34,7 @@ public class BiomeInit {
 	private static void registerBiome(Biome biome, Type... types) {
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);
+		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 100));
 	}
 	
 }
