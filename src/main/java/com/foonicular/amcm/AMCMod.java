@@ -7,6 +7,7 @@ import com.foonicular.amcm.init.BiomeInit;
 import com.foonicular.amcm.init.BlockInit;
 import com.foonicular.amcm.init.ItemInit;
 import com.foonicular.amcm.init.ModTileEntityTypes;
+import com.foonicular.amcm.init.SoundInit;
 import com.foonicular.amcm.world.gen.RubyOreGen;
 
 import net.minecraft.item.BlockItem;
@@ -42,6 +43,7 @@ public class AMCMod {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
         
+        SoundInit.SOUNDS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);

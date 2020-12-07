@@ -8,9 +8,9 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
-public class MossBlock extends Block {
+public class PoopBlock extends Block {
 
-	public MossBlock(Properties properties) {
+	public PoopBlock(Properties properties) {
 		super(properties);
 	}
 	
@@ -19,9 +19,9 @@ public class MossBlock extends Block {
 	    net.minecraftforge.common.PlantType type = plantable.getPlantType(world, pos.offset(facing));
 
 	    switch (type) {
-	        case Desert: return false;
-	        case Nether: return false;
-	        case Crop:   return false;
+	        case Desert: return true;
+	        case Nether: return true;
+	        case Crop:   return true;
 	        case Cave:   return true;
 	        case Plains: return true;
 	        case Water:  return false;

@@ -2,6 +2,7 @@ package com.foonicular.amcm.init;
 
 import com.foonicular.amcm.AMCMod;
 import com.foonicular.amcm.objects.items.Peat;
+import com.foonicular.amcm.objects.items.PromisesDisc;
 import com.foonicular.amcm.objects.items.RingOfStrength;
 import com.foonicular.amcm.util.enums.RubyArmorMaterial;
 import com.foonicular.amcm.util.enums.RubyItemTier;
@@ -13,6 +14,7 @@ import net.minecraft.item.Food;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.potion.EffectInstance;
@@ -22,9 +24,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit {
-	
+
 	public static DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, AMCMod.MOD_ID);
-	
+
 	// Items
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 			() -> new Item(new Item.Properties().group(AMCMod.TAB)));
@@ -39,7 +41,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> RING_OF_STRENGTH = ITEMS.register("ring_of_strength",
 			() -> new RingOfStrength(new Item.Properties().group(AMCMod.TAB)));
 	
-	/**
+	// Music Discs
+	public static final RegistryObject<Item> PROMISES_DISC = ITEMS.register("disc_promises",
+			() -> new PromisesDisc(8, SoundInit.LAZY_PROMISES_MUSIC.get(),
+					new Item.Properties().group(AMCMod.TAB).maxStackSize(1).rarity(Rarity.RARE)));
+
+	/*
 	 * Tools
 	 * 
 	 * Attack Damage (int), attack speed (float)
@@ -54,7 +61,7 @@ public class ItemInit {
 			() -> new ShovelItem(RubyItemTier.RUBYTOOLS, 1, 0.0f, new Item.Properties().group(AMCMod.TAB)));
 	public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
 			() -> new HoeItem(RubyItemTier.RUBYTOOLS, 0.5f, new Item.Properties().group(AMCMod.TAB)));
-	
+
 	// Armor
 	public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
 			() -> new ArmorItem(RubyArmorMaterial.RUBYARMOR, EquipmentSlotType.HEAD,
@@ -68,9 +75,9 @@ public class ItemInit {
 	public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
 			() -> new ArmorItem(RubyArmorMaterial.RUBYARMOR, EquipmentSlotType.FEET,
 					new Item.Properties().group(AMCMod.TAB)));
-	
+
 	// Fuel
 	public static final RegistryObject<Item> FORTNITE = ITEMS.register("peat",
 			() -> new Peat(new Item.Properties().group(AMCMod.TAB)));
-	
+
 }

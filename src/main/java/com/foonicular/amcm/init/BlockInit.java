@@ -4,6 +4,7 @@ import com.foonicular.amcm.AMCMod;
 import com.foonicular.amcm.objects.blocks.BlockQuarry;
 import com.foonicular.amcm.objects.blocks.MossBlock;
 import com.foonicular.amcm.objects.blocks.Oven;
+import com.foonicular.amcm.objects.blocks.PoopBlock;
 import com.foonicular.amcm.objects.blocks.RubyButton;
 import com.foonicular.amcm.objects.blocks.RubyOre;
 import com.foonicular.amcm.objects.blocks.RubyPressurePlate;
@@ -38,7 +39,7 @@ public class BlockInit {
 			() -> new MossBlock(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.5f, 0.5f)
 					.harvestTool(ToolType.SHOVEL).sound(SoundType.WET_GRASS)));
 	public static final RegistryObject<Block> POOP_BLOCK = BLOCKS.register("poop_block",
-			() -> new Block(Block.Properties.create(Material.CLAY).hardnessAndResistance(2.0f, 0.5f)
+			() -> new PoopBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(2.0f, 0.5f)
 					.harvestTool(ToolType.SHOVEL).sound(SoundType.WET_GRASS)));
 
 	// Stairs

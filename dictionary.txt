@@ -1,3 +1,4 @@
 maxspawn
 minspawn
 entitytype
+int
