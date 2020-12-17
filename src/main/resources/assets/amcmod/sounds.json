@@ -1,7 +1,6 @@
 {
 	"disc.promises": {
 		"category": "disc",
-		"subtitle": "promises",
 		"sounds": [
 			{
 				"name": "amcmod:disc/promises",

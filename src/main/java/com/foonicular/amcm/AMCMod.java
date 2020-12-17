@@ -8,12 +8,14 @@ import com.foonicular.amcm.init.BlockInit;
 import com.foonicular.amcm.init.ItemInit;
 import com.foonicular.amcm.init.ModTileEntityTypes;
 import com.foonicular.amcm.init.SoundInit;
+import com.foonicular.amcm.world.gen.ChristmasTreeGen;
 import com.foonicular.amcm.world.gen.RubyOreGen;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -89,12 +91,13 @@ public class AMCMod {
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
     	RubyOreGen.generateOre();
+    	ChristmasTreeGen.generateChristmasTree();
     }
     
     // Custom Item Group
     public static final ItemGroup TAB = new ItemGroup("amcmodtab") {
         @Override
-        public ItemStack createIcon() { return new ItemStack(ItemInit.RUBY.get()); }
+        public ItemStack createIcon() { return new ItemStack((IItemProvider) ItemInit.RUBY.get()); }
     };
     
 }

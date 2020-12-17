@@ -2,3 +2,5 @@ maxspawn
 minspawn
 entitytype
 int
+biome
+config

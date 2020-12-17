@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "amcmod:block/christmas_tree_log" },
+        "axis=z":   { "model": "amcmod:block/christmas_tree_log", "x": 90 },
+        "axis=x":   { "model": "amcmod:block/christmas_tree_log", "x": 90, "y": 90 }
+    }
+}

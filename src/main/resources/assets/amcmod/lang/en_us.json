@@ -1,4 +1,5 @@
 {
+	
 	"itemGroup.amcmodtab": "AMCMod Tab",
 	
 	"item.amcmod.ruby": "Ruby",
@@ -10,12 +11,20 @@
 	"block.amcmod.ruby_ore": "Ruby Ore",
 	"block.amcmod.moss_block": "Moss Block",
 	"block.amcmod.poop_block": "Poop Block",
+	
 	"block.amcmod.oven": "Oven",
 	"block.amcmod.quarry": "Quarry",
+	
 	"block.amcmod.ruby_stairs": "Ruby Stairs",
 	"block.amcmod.ruby_pressure_plate": "Ruby Pressure Plate",
 	"block.amcmod.ruby_button": "Ruby Button",
 	"block.amcmod.ruby_fence": "Ruby Fence",
+	
+	"block.amcmod.christmas_tree_sapling": "Christmas Tree Sapling",
+	"block.amcmod.christmas_tree_planks": "Christmas Tree Planks",
+	"block.amcmod.christmas_tree_log": "Christmas Tree Log",
+	"block.amcmod.christmas_tree_leaves": "Christmas Tree Leaves",
+	
 	
 	"item.amcmod.ruby_sword": "Ruby Sword",
 	"item.amcmod.ruby_pickaxe": "Ruby Pickaxe",

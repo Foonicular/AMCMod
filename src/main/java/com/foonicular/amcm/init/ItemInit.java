@@ -30,7 +30,6 @@ public class ItemInit {
 	// Items
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 			() -> new Item(new Item.Properties().group(AMCMod.TAB)));
-	@SuppressWarnings("deprecation")
 	public static final RegistryObject<Item> POISON_APPLE = ITEMS.register("poison_apple",
 			() -> new Item(new Item.Properties().group(AMCMod.TAB)
 					.food(new Food.Builder().hunger(3).saturation(1.2f).setAlwaysEdible()

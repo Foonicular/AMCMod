@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "amcmod:blocks/christmas_tree_log_top",
+        "side": "amcmod:blocks/christmas_tree_log"
+    }
+}

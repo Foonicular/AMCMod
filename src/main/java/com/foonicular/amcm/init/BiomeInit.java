@@ -26,15 +26,17 @@ public class BiomeInit {
 							new SurfaceBuilderConfig(BlockInit.MOSS_BLOCK.get().getDefaultState(),
 									Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState()))
 					.category(Category.SWAMP).downfall(0.9f).parent(null)));
+
 	
+	// Register Biome Code
 	public static void registerBiomes() {
 		registerBiome(MOSSY_BIOME.get(), Type.OVERWORLD, Type.SWAMP, Type.WET, Type.LUSH);
 	}
-	
+
 	private static void registerBiome(Biome biome, Type... types) {
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);
 		BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 100));
 	}
-	
+
 }

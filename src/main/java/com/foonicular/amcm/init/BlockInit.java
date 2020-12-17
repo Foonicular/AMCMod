@@ -2,19 +2,25 @@ package com.foonicular.amcm.init;
 
 import com.foonicular.amcm.AMCMod;
 import com.foonicular.amcm.objects.blocks.BlockQuarry;
+import com.foonicular.amcm.objects.blocks.ChristmasTreeSapling;
 import com.foonicular.amcm.objects.blocks.MossBlock;
 import com.foonicular.amcm.objects.blocks.Oven;
 import com.foonicular.amcm.objects.blocks.PoopBlock;
 import com.foonicular.amcm.objects.blocks.RubyButton;
 import com.foonicular.amcm.objects.blocks.RubyOre;
 import com.foonicular.amcm.objects.blocks.RubyPressurePlate;
+import com.foonicular.amcm.world.feature.ChristmasTree;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.LogBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -41,6 +47,22 @@ public class BlockInit {
 	public static final RegistryObject<Block> POOP_BLOCK = BLOCKS.register("poop_block",
 			() -> new PoopBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(2.0f, 0.5f)
 					.harvestTool(ToolType.SHOVEL).sound(SoundType.WET_GRASS)));
+
+	// Planks
+	public static final RegistryObject<Block> CHRISTMAS_TREE_PLANKS = BLOCKS.register("christmas_tree_planks",
+			() -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
+
+	// Logs
+	public static final RegistryObject<Block> CHRISTMAS_TREE_LOG = BLOCKS.register("christmas_tree_log",
+			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+
+	// Leaves
+	public static final RegistryObject<Block> CHRISTMAS_TREE_LEAVES = BLOCKS.register("christmas_tree_leaves",
+			() -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES).lightValue(4)));
+
+	// Saplings
+	public static final RegistryObject<Block> CHRISTMAS_TREE_SAPLING = BLOCKS.register("christmas_tree_sapling",
+			() -> new ChristmasTreeSapling(() -> new ChristmasTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
 
 	// Stairs
 	public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs",
