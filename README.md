@@ -1,1 +1,1 @@
---THIS MOD IS UNDER CONSTRUCTION--
+Progress on this mod has been stopped, I am still working on mods though. My most recent mod is for 1.16.4 and will be very similar to this, although better package organization and so on. Feel free to use the src code!
